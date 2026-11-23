@@ -1,0 +1,209 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  line-height: 1.6;
+  background-color: #FFFFF0;
+}
+
+/* Sticky navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #800020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.navbar .logo {
+  height: 50px;
+  width: auto;
+}
+
+.navbar nav a {
+  color: #C9A84C;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.navbar nav a:hover {
+  color: #FFFFFF;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 0, 32, 0.4);
+  z-index: -1;
+}
+
+.hero-content {
+  color: #FFFFF0;
+  padding: 20px;
+}
+
+.hero-content h1 {
+ text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.btn-gold {
+  display: inline-block;
+  background-color: #C9A84C;
+  color: #800020;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 14px 35px;
+  border-radius: 4px;
+}
+
+/* Section headings */
+.section {
+  padding: 60px 40px;
+}
+
+.section h2 {
+  text-align: center;
+  color: #800020;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+/* Room cards: Flexbox, 2 per row */
+.room-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.room-card {
+  flex: 0 0 calc(50% - 13px);
+  background-color: #FFFFFF;
+  border: 2px solid #C9A84C;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+}
+
+.room-card h3 {
+  color: #800020;
+  font-size: 24px;
+}
+
+.room-price {
+  color: #C9A84C;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Comparison table */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+}
+
+th,
+td {
+  border: 1px solid #DDDDDD;
+  padding: 14px;
+  text-align: center;
+}
+
+thead th {
+  background-color: #800020;
+  color: #FFFFFF;
+  font-size: 17px;
+}
+
+tbody th {
+  text-align: left;
+  background-color: #FAF5E6;
+  color: #800020;
+}
+
+tbody tr:nth-child(even) td {
+  background-color: #FFFFF8;
+}
+
+.yes {
+  color: #1E7B34;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.no {
+  color: #C62828;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Booking placeholder */
+.booking-placeholder {
+  background-color: #800020;
+  color: #FFFFF0;
+  text-align: center;
+  padding: 60px 40px;
+}
+
+/* Footer */
+footer {
+  background-color: #800020;
+  color: #C9A84C;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .room-card {
+    flex: 0 0 100%;
+  }
+  .hero-content h1 {
+    font-size: 30px;
+  }
+}
